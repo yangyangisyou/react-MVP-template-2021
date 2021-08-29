@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import styled from '@emotion/styled';
-import GlobalStyled from './shared/styles/Reset';
+import GlobalStyled from './shared/styles/Global';
 import Home from './pages/Home';
 
 const App = () => {

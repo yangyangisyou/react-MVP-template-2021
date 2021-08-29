@@ -1,7 +1,8 @@
 import React from 'react';
+import { Global, css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-const ResetWrapper = styled.div`
+const ResetCSS = css`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    margin: 0;
 }
 ol, ul {
     list-style: none;
@@ -45,11 +47,16 @@ table {
     border-spacing: 0;
 }`;
 
+const BodyWrapper = styled.div`
+    height: 100vh;
+`;
+
 const Reset = ({ children }) => {
   return (
-    <ResetWrapper>
+    <BodyWrapper>
+      <Global styles={ResetCSS} />
       {children}
-    </ResetWrapper>
+    </BodyWrapper>
   );
 };
 
